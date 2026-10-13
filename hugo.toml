@@ -1,0 +1,62 @@
+# ============================================================
+#  SITE SETTINGS: edit the values in this section first
+# ============================================================
+baseURL = "https://Col9362.github.io/"
+title = "Your Name"
+theme = "hugo-coder"
+locale = "en"
+enableEmoji = true
+
+[params]
+author = "Your Name"
+description = "Your Name's portfolio"
+keywords = "portfolio,projects"
+# Lines shown under your name on the home page
+info = ["Student / Developer / Designer", "Based in Your City"]
+# Replace static/images/avatar.svg with your own photo (e.g. avatar.jpg) and update this path
+avatarURL = "images/avatar.svg"
+dateFormat = "January 2006"
+since = 2026
+# "auto" follows the visitor's system setting; "light" or "dark" forces one
+colorScheme = "auto"
+hideColorSchemeToggle = false
+customCSS = ["css/custom.css"]
+
+# Social icons on the home page. Delete any you don't use.
+# Icon names come from https://fontawesome.com/icons (free brands/solid)
+[[params.social]]
+name = "GitHub"
+icon = "fa-brands fa-github fa-2x"
+weight = 1
+url = "https://github.com/Col9362/"
+
+[[params.social]]
+name = "LinkedIn"
+icon = "fa-brands fa-linkedin fa-2x"
+weight = 2
+url = "https://www.linkedin.com/in/YOUR-LINKEDIN/"
+
+[[params.social]]
+name = "Email"
+icon = "fa-solid fa-envelope fa-2x"
+weight = 3
+url = "mailto:you@example.com"
+
+# Top navigation menu
+[[menu.main]]
+name = "About"
+weight = 1
+url = "about/"
+
+[[menu.main]]
+name = "Projects"
+weight = 2
+url = "projects/"
+
+[[menu.main]]
+name = "Contact"
+weight = 3
+url = "contact/"
+
+[markup.goldmark.renderer]
+unsafe = true

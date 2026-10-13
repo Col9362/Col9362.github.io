@@ -1,0 +1,36 @@
+{{ define "title" }}{{ .Title }} · {{ .Site.Title }}{{ end }}
+{{ define "content" }}
+  <section class="container post">
+    <article>
+      <header>
+        <div class="post-title">
+          <h1 class="title">
+            <a class="title-link" href="{{ .Permalink | safeURL }}">{{ .Title }}</a>
+          </h1>
+        </div>
+        <div class="post-meta project-meta">
+          <span><i class="fa-solid fa-calendar" aria-hidden="true"></i>
+            {{ .Date | time.Format (.Site.Params.dateFormat | default "January 2006") }}</span>
+          {{ with .Params.github }}
+            <a href="{{ . }}" target="_blank" rel="noopener"><i class="fa-brands fa-github" aria-hidden="true"></i> Code</a>
+          {{ end }}
+          {{ with .Params.demo }}
+            <a href="{{ . }}" target="_blank" rel="noopener"><i class="fa-solid fa-arrow-up-right-from-square" aria-hidden="true"></i> Live demo</a>
+          {{ end }}
+        </div>
+        {{ with .Params.tech }}
+          <ul class="tech">{{ range . }}<li>{{ . }}</li>{{ end }}</ul>
+        {{ end }}
+      </header>
+
+      <div class="post-content">
+        {{ with .Params.image }}<img class="project-hero" src="{{ . | relURL }}" alt="">{{ end }}
+        {{ .Content }}
+      </div>
+
+      <footer>
+        <p><a href="{{ "projects/" | relURL }}">← All projects</a></p>
+      </footer>
+    </article>
+  </section>
+{{ end }}

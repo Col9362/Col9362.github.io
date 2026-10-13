@@ -1,0 +1,33 @@
+/* Project cards. Colors use currentColor so they work in light and dark mode. */
+.project-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(260px, 1fr));
+  gap: 1.6rem;
+  margin-top: 2rem;
+}
+.project-card {
+  display: flex;
+  flex-direction: column;
+  border: 1px solid rgba(127, 127, 127, 0.3);
+  border-radius: 8px;
+  overflow: hidden;
+  color: inherit !important;
+  text-decoration: none !important;
+  transition: border-color 0.15s, transform 0.15s;
+}
+.project-card:hover { border-color: rgba(127, 127, 127, 0.7); transform: translateY(-2px); }
+.project-card img { width: 100%; aspect-ratio: 16 / 9; object-fit: cover; display: block; }
+.project-card-body { padding: 1.2rem 1.4rem 1.4rem; }
+.project-card h2 { font-size: 2rem; margin: 0 0 0.6rem; }
+.project-card p { font-size: 1.5rem; margin: 0 0 1rem; opacity: 0.8; line-height: 1.5; }
+
+.tech { list-style: none; padding: 0; margin: 0.8rem 0 0; display: flex; flex-wrap: wrap; gap: 0.5rem; }
+.tech li {
+  font-size: 1.25rem;
+  padding: 0.15rem 0.7rem;
+  border-radius: 999px;
+  border: 1px solid rgba(127, 127, 127, 0.4);
+}
+
+.project-meta { display: flex; flex-wrap: wrap; gap: 1.6rem; }
+.project-hero { width: 100%; border-radius: 8px; margin-bottom: 1.6rem; }
