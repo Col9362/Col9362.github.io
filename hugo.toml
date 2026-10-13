@@ -1,7 +1,7 @@
 # ============================================================
 #  SITE SETTINGS: edit the values in this section first
 # ============================================================
-baseURL = "https://Col9362.github.io/"
+baseURL = "https://colezuckerman.com/"
 title = "Your Name"
 theme = "hugo-coder"
 locale = "en"
