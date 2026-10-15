@@ -2,4 +2,4 @@
 title: "Projects"
 ---
 
-A selection of things I've built. Click any project for details.
+Hardware projects I've designed and built, from PCB to case to firmware.

@@ -10,7 +10,7 @@
     <div class="project-grid">
       {{ range .Pages.ByWeight }}
         <a class="project-card" href="{{ .RelPermalink }}">
-          {{ with .Params.image }}<img src="{{ . | relURL }}" alt="">{{ end }}
+          {{ with .Params.thumbnail | default .Params.image }}<img src="{{ . | relURL }}" alt="">{{ end }}
           <div class="project-card-body">
             <h2>{{ .Title }}</h2>
             <p>{{ .Summary | plainify }}</p>

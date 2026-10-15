@@ -2,18 +2,18 @@
 #  SITE SETTINGS: edit the values in this section first
 # ============================================================
 baseURL = "https://colezuckerman.com/"
-title = "Your Name"
+title = "Cole Zuckerman"
 theme = "hugo-coder"
 locale = "en"
 enableEmoji = true
 
 [params]
-author = "Your Name"
-description = "Your Name's portfolio"
-keywords = "portfolio,projects"
+author = "Cole Zuckerman"
+description = "Cole Zuckerman: electrical engineering student at Purdue building PCBs, embedded systems and hardware projects."
+keywords = "Cole Zuckerman,electrical engineering,Purdue,PCB design,embedded systems,portfolio"
 # Lines shown under your name on the home page
-info = ["Student / Developer / Designer", "Based in Your City"]
-# Replace static/images/avatar.svg with your own photo (e.g. avatar.jpg) and update this path
+info = ["Electrical Engineering @ Purdue", "PCB Design · Embedded Systems · CAD"]
+# Your headshot. Put the file in static/images/ and update this path
 avatarURL = "images/avatar.svg"
 dateFormat = "January 2006"
 since = 2026
@@ -34,13 +34,13 @@ url = "https://github.com/Col9362/"
 name = "LinkedIn"
 icon = "fa-brands fa-linkedin fa-2x"
 weight = 2
-url = "https://www.linkedin.com/in/YOUR-LINKEDIN/"
+url = "https://www.linkedin.com/in/colezuckerman/"
 
 [[params.social]]
 name = "Email"
 icon = "fa-solid fa-envelope fa-2x"
 weight = 3
-url = "mailto:you@example.com"
+url = "mailto:colezuckerman2@gmail.com"
 
 # Top navigation menu
 [[menu.main]]
