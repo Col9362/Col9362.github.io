@@ -36,7 +36,7 @@ own, so unplugging a module mid-game drops you safely back to the home screen.
 click. An ADS1115 ADC reads the analog joystick, and a DRV2605 driver adds haptic
 feedback. All three share one I2C bus through the pogo connector.
 
-![3D render of the base unit PCB](/images/projects/handheld/render-3d.png)
+![3D render of the base unit PCB](/images/projects/handheld/render-board.png)
 
 ![The magnetic pogo connector on the board edge and the display ribbon cable](/images/projects/handheld/render-connectors.png)
 
