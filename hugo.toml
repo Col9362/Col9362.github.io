@@ -14,7 +14,7 @@ keywords = "Cole Zuckerman,electrical engineering,Purdue,PCB design,embedded sys
 # Lines shown under your name on the home page
 info = ["Electrical Engineering @ Purdue", "PCB Design · Embedded Systems · CAD"]
 # Your headshot. Put the file in static/images/ and update this path
-avatarURL = "images/avatar.svg"
+avatarURL = "images/avatar.jpg"
 dateFormat = "January 2006"
 since = 2026
 # "auto" follows the visitor's system setting; "light" or "dark" forces one
