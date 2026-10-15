@@ -1,6 +1,6 @@
-# My Portfolio
+# colezuckerman.com
 
-Built with [Hugo](https://gohugo.io) and the [Coder](https://github.com/luizdepra/hugo-coder) theme.
+Source for my portfolio site, https://colezuckerman.com. Built with [Hugo](https://gohugo.io) and the [Coder](https://github.com/luizdepra/hugo-coder) theme.
 
 ## Where things live
 
@@ -23,7 +23,8 @@ Or copy an existing project file. The top section (between the `---` lines) cont
 
 - `title`, `summary`: shown on the card
 - `tech`: list of tags, e.g. `["Python", "React"]`
-- `image`: path to a screenshot in `static/` (optional)
+- `image`: path to the main photo in `static/` (optional)
+- `thumbnail`: a different photo for the card on the Projects page (optional)
 - `github`, `demo`: links (optional)
 - `weight`: order on the Projects page (lower = first)
 
@@ -39,5 +40,5 @@ Then open http://localhost:1313.
 
 ## Publish
 
-Push to a GitHub repo named `YOUR-USERNAME.github.io`, then in the repo go to
-**Settings → Pages → Source** and pick **GitHub Actions**. Every push to `main` redeploys the site.
+Every push to `main` is built by GitHub Actions (`.github/workflows/hugo.yml`) and
+published to GitHub Pages at https://colezuckerman.com within about a minute.
