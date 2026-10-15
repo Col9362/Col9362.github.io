@@ -1,7 +1,7 @@
 ---
 title: "Modular Handheld Device"
 date: 2026-06-01
-summary: "A handheld built around hot-swappable control modules that snap on through a pogo-pin connector and are detected automatically over I2C."
+summary: "A handheld built around hot-swappable control modules that snap on through a magnetic pogo-pin connector and are detected automatically over I2C."
 tech: ["MicroPython", "Raspberry Pi Pico", "KiCad", "Onshape", "I2C"]
 image: "images/projects/handheld/assembled.jpg"
 thumbnail: "images/projects/handheld/modules.jpg"
@@ -21,7 +21,8 @@ Next I plan to build a music-creation module and a keyboard module.
 ## How it works
 
 **Base unit:** a Raspberry Pi Pico running MicroPython drives an ST7789 touchscreen
-over SPI and two buzzers for sound. An 8-pin pogo connector on the edge carries
+over SPI through an 18-pin FPC ribbon cable, plus two buzzers for sound. An 8-pin
+right-angle magnetic pogo connector on the board edge carries
 power, I2C, an interrupt line, a module-ID line and two expansion pins to whichever
 module is attached.
 
@@ -36,6 +37,8 @@ click. An ADS1115 ADC reads the analog joystick, and a DRV2605 driver adds hapti
 feedback. All three share one I2C bus through the pogo connector.
 
 ![3D render of the base unit PCB](/images/projects/handheld/render-3d.png)
+
+![The magnetic pogo connector on the board edge and the display ribbon cable](/images/projects/handheld/render-connectors.png)
 
 ## Software
 
