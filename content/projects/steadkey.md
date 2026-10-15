@@ -72,6 +72,8 @@ its own input pin, which capped the number of keys we could have.
 
 ### Generation 2: key matrix, RGB LEDs and the trackball
 
+![Generation 2 PCB layout in KiCad](/images/projects/steadkey/gen2-kicad.jpg)
+
 To move to a full layout, I redesigned the board around a **diode key matrix**. Each
 switch sits where one row line crosses one column line, so the microcontroller can scan
 dozens of keys with a handful of pins. The diodes stop "ghost" keypresses when several
