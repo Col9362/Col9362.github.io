@@ -35,7 +35,7 @@ own, so unplugging a module mid-game drops you safely back to the home screen.
 click. An ADS1115 ADC reads the analog joystick, and a DRV2605 driver adds haptic
 feedback. All three share one I2C bus through the pogo connector.
 
-![Base unit PCB layout in KiCad](/images/projects/handheld/pcb.jpg)
+![3D render of the base unit PCB](/images/projects/handheld/render-3d.png)
 
 ## Software
 
@@ -46,9 +46,15 @@ I wrote the whole interface in MicroPython:
 - A settings menu for brightness and volume, saved to flash
 - A battery level and charging indicator
 
-## Schematics
+## PCB design
 
-![Base unit schematic](/images/projects/handheld/schematic-base.jpg)
+I designed the base unit's two-layer PCB in KiCad. The Pico sits in the center, the
+display's flat-flex connector is on the left, and the pogo connector runs along the
+bottom edge where modules attach.
+
+![Base unit PCB layout: front copper in red, back copper in blue](/images/projects/handheld/pcb-layout.svg)
+
+![Base unit schematic](/images/projects/handheld/schematic-base.svg)
 
 ![Gaming module schematic](/images/projects/handheld/schematic-gaming.jpg)
 
