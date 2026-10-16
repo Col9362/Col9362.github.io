@@ -1,42 +1,47 @@
-# Skills page data. Each item uses `icon` (an SVG in assets/icons/, from simpleicons.org),
-# `img` (a logo file in static/images/skills/) or `fa` (a Font Awesome class). `color` tints the logo;
-# leave it out to use the text color. `projects` link to project pages by slug.
+# Skills page data. Each item uses `img` (a logo file in static/images/skills/),
+# `icon` (a one-color SVG in assets/icons/, from simpleicons.org, tinted with `color`)
+# or `fa` (a Font Awesome class, tinted with `color`).
 groups:
   - name: Programming
     items:
-      - { name: Python, icon: python, color: "#3776AB", note: "Key-layout optimization", projects: [steadkey] }
-      - { name: MicroPython, icon: micropython, note: "Handheld firmware and UI", projects: [modular-handheld] }
-      - { name: "C++ (Arduino)", icon: cplusplus, color: "#00599C", note: "SteadKey firmware", projects: [steadkey] }
-      - { name: Java, icon: openjdk }
+      - { name: Python, img: python.svg }
+      - { name: MicroPython, icon: micropython }
+      - { name: C++, img: cplusplus.svg }
+      - { name: Java, img: java.svg }
 
   - name: Electronics & PCB Design
     items:
-      - { name: KiCad, icon: kicad, color: "#4F6BD8", note: "Schematics and PCB layout", projects: [modular-handheld, steadkey] }
+      - { name: KiCad, img: kicad.svg }
       - { name: Circuit Design, fa: "fa-solid fa-microchip", color: "#2BB673" }
       - { name: Circuit Analysis, fa: "fa-solid fa-wave-square", color: "#E3A008" }
       - { name: Logic Design, fa: "fa-solid fa-diagram-project", color: "#8B5CF6" }
-      - { name: "Soldering (THT & SMD)", fa: "fa-solid fa-fire-flame-curved", color: "#F05032", note: "Including hot-air reflow" }
+      - { name: Soldering, fa: "fa-solid fa-fire-flame-curved", color: "#F05032" }
 
   - name: Microcontrollers
     items:
-      - { name: Raspberry Pi Pico, icon: raspberrypi, color: "#A22846", projects: [modular-handheld] }
-      - { name: ESP32, icon: espressif, color: "#E7352C", note: "Arduino Nano ESP32, dual-core firmware", projects: [steadkey] }
-      - { name: Arduino, icon: arduino, color: "#00878F", projects: [steadkey] }
+      - { name: Raspberry Pi, img: raspberrypi.svg }
+      - { name: ESP32, icon: espressif, color: "#E7352C" }
+      - { name: Arduino, img: arduino.svg }
 
   - name: CAD & Fabrication
     items:
-      - { name: Onshape, img: onshape.png, note: "Enclosures and mechanisms", projects: [modular-handheld, steadkey] }
+      - { name: Onshape, img: onshape.png }
       - { name: 3D Printing, fa: "fa-solid fa-print", color: "#F97316" }
       - { name: CNC Mill & Lathe, fa: "fa-solid fa-gears", color: "#64748B" }
-      - { name: "Bandsaw, Drill Press & Hand Tools", fa: "fa-solid fa-screwdriver-wrench", color: "#94A3B8" }
+      - { name: Machining & Hand Tools, fa: "fa-solid fa-screwdriver-wrench", color: "#94A3B8" }
 
   - name: Software & Tools
     items:
-      - { name: Git, icon: git, color: "#F05032" }
+      - { name: Git, img: git.svg }
       - { name: GitHub, icon: github }
-      - { name: GitHub Actions, icon: githubactions, color: "#2088FF", note: "HPCC Platform workflow docs" }
+      - { name: GitHub Actions, img: githubactions.svg }
       - { name: VS Code, img: vscode.svg }
       - { name: Thonny, img: thonny.png }
-      - { name: Google Sheets, icon: googlesheets, color: "#34A853" }
+
+  - name: Productivity
+    items:
+      - { name: Word, img: word.svg }
       - { name: Excel, img: excel.svg }
+      - { name: PowerPoint, img: powerpoint.svg }
+      - { name: Google Sheets, img: googlesheets.svg }
       - { name: Shopify, icon: shopify, color: "#7AB55C" }
