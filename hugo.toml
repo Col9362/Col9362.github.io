@@ -9,7 +9,7 @@ enableEmoji = true
 
 [params]
 author = "Cole Zuckerman"
-description = "Cole Zuckerman: electrical engineering student at Purdue building PCBs, embedded systems and hardware projects."
+description = "Cole Zuckerman, electrical engineering student at Purdue. Projects, skills and experience."
 keywords = "Cole Zuckerman,electrical engineering,Purdue,PCB design,embedded systems,portfolio"
 # Lines shown under your name on the home page
 info = ["Electrical Engineering @ Purdue", "PCB Design · Embedded Systems · CAD"]

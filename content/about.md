@@ -2,15 +2,15 @@
 title: "About"
 ---
 
-I'm Cole Zuckerman, a first-year engineering student in the John Martinson Honors
-College at Purdue University, planning to major in Electrical Engineering.
-I like building hardware end to end: designing the circuit and PCB, modeling and
-printing the case, and writing the firmware that ties it together.
+I'm Cole Zuckerman, a first-year engineering student at Purdue in the John Martinson
+Honors College, and I'm planning to major in Electrical Engineering. Most of my
+projects are hardware I build from start to finish. I design the circuit and PCB,
+model and 3D print the case, and write the code that runs on it.
 
 ## Education
 
 ### Purdue University
-*B.S. First-Year Engineering (expected Electrical Engineering) · John Martinson Honors College*<br>
+*B.S. First-Year Engineering (planning on Electrical Engineering) · John Martinson Honors College*<br>
 *West Lafayette, IN · Aug. 2026 – May 2030 (expected)*
 
 ## Experience
@@ -18,31 +18,32 @@ printing the case, and writing the firmware that ties it together.
 ### Committee Member · Purdue IEEE SMC, EEG Build Team
 *West Lafayette, IN · Sept. 2026 – present*
 
-Part of the IEEE Systems, Man, and Cybernetics (SMC) committee building an EEG
-(brain-signal) acquisition system. I'm working on a custom ESP32-P4 microcontroller
-board in KiCad that interfaces with the team's ADS1299 analog front-end board.
-Project page coming once the board is further along.
+I'm on the IEEE Systems, Man, and Cybernetics (SMC) committee, which is building an EEG
+system to record brain signals. Right now I'm working on a custom ESP32-P4
+microcontroller board in KiCad that connects to the team's ADS1299 board. I'll add a
+project page once it's further along.
 
 ### Data Analyst / IT Support · Coastal Weight Loss Secret
 *Delray Beach, FL · Sept. 2022 – present*
 
-Built a Google Sheets management interface that analyzes advertising ROI across 8
-radio stations and customer conversion rates. I also build and manage the Shopify
-site and edit video for social media.
+I built a management sheet in Google Sheets that tracks advertising ROI across 8 radio
+stations and how many customers convert. I also run the company's Shopify site and edit
+videos for social media.
 
 ### Computer Science Workflow Intern · CodeDay Labs + LexisNexis
 *Remote · May – June 2025*
 
-One of six students chosen for a pilot internship. Analyzed the GitHub Actions
-workflows of the open-source HPCC Platform and wrote the official `TestWorkflows.md`
-documentation on its build and test process.
+I was one of six students picked for a pilot internship with LexisNexis. I went through
+the GitHub Actions workflows for the open-source HPCC Platform and wrote
+`TestWorkflows.md`, the official documentation for how it gets built and tested.
 
 ### Robotics Summer Camp Counselor · American Heritage
 *Delray Beach, FL · June 2023 – Aug. 2024*
 
-Supervised ~20 middle schoolers per session and led FTC robot builds, programming,
-and manufacturing with a CNC mill, drill press and 3D printers.
+I helped run a robotics camp with about 20 middle schoolers per session. I led FTC robot
+builds and programming, and taught campers to use the CNC mill, drill press and 3D
+printers.
 
 ## Skills
 
-See my [Skills](/skills/) page for the languages, tools and fabrication methods I use.
+Check out my [Skills](/skills/) page.
