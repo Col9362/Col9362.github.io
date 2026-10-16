@@ -1,7 +1,7 @@
 ---
 title: "SteadKey: Parkinson's Accessible Keyboard"
 date: 2026-03-13
-summary: "A keyboard and trackball for people with tremors, shaped by interviews with patients and neurologists. Built on a custom key-matrix PCB with RGB layer indicators."
+summary: "A keyboard and trackball for people with tremors. We built three versions over a school year, working off interviews with patients and neurologists."
 tech: ["Arduino Nano ESP32", "KiCad", "Onshape", "C++", "PCB Design"]
 image: "images/projects/steadkey/final.jpg"
 weight: 2
@@ -9,123 +9,107 @@ weight: 2
 
 ## Overview
 
-SteadKey is a keyboard for people with Parkinson's disease and essential tremor. Many
-of them find standard keyboards and mice so frustrating that they stop using computers
-altogether. Our team of four built it over three generations from May 2025 to March
-2026. I was the **lead programmer, CAD designer and PCB designer**.
+SteadKey is a keyboard made for people with Parkinson's and essential tremor. A lot of
+people with tremors have a really hard time with normal keyboards and mice, and some
+just stop using computers. It was a four-person project in my engineering class, and we
+went through three versions between May 2025 and March 2026. I did the programming,
+the CAD and the PCB design.
 
-The final version, shown above, has large keys. Several characters share each key, and
-you switch between them in layers using shift keys or two foot pedals. RGB LEDs show
-which layer you're on. It also has a captive trackball in place of a mouse and a small
-OLED screen that suggests the next word as you type.
+The keys are big, and each one holds a few characters. You switch between layers with
+the shift keys or with two foot pedals, and RGB LEDs under the keys change color so you
+know which layer you're on. There's a trackball built in so you don't need a mouse, and
+a small OLED screen that shows autocomplete suggestions.
 
-## Designing with users, not just for them
+## Talking to users
 
-We built the design around interviews with people living with Parkinson's and with
-neurologists. Here's what they told us and how we changed SteadKey in response.
+Before we designed much of anything, we talked to people with Parkinson's and to two
+neurologists.
 
-**People with Parkinson's.** The person I interviewed, a family friend with Parkinson's,
-told me it was so hard to avoid mistakes that they had become afraid of using computers
-at all. With no real workaround, they relied only on voice-to-text on their phone. When I
-asked what would help, they named big buttons, a mouse that stays still (a trackball) and
-autocomplete. Another interviewee said they avoided keyboards completely and had other
-people type for them, and that bigger keys would cut down their constant missed
-keystrokes. Those conversations set the core feature list: oversized keys, a built-in
-trackball and word prediction.
+The person I interviewed is a family friend with Parkinson's. They said it's so hard
+not to mess things up on a computer that they'd become afraid to use one, so they only
+use voice-to-text on their phone. When I asked what would help, they said big buttons,
+a mouse that doesn't move (basically a trackball) and autocomplete. Another person we
+talked to said they avoid keyboards and have other people type for them, and that
+bigger keys would help with all the keys they miss.
 
-**Neurologists.** We interviewed two neurologists, who gave us complementary advice:
+The neurologists added a lot. One explained that Parkinson's tremors are usually worst
+when the hand is resting, but other people shake more when they move, so the keyboard
+should work for both. He liked the trackball idea since a mouse is hard to control with
+a tremor. He also suggested a wrist rest, and basing the layers on old cellphone keypads
+so they'd feel familiar. The other neurologist was more critical and warned that
+switching layers could be too confusing, especially for patients with some cognitive
+decline.
 
-- One explained that tremor types differ. Parkinson's tremors are often worst when the
-  hand is at rest, while other people shake mostly while moving. He told us to design
-  for both. He also endorsed the trackball, since a regular mouse is easily thrown off by
-  tremors. He suggested a **wrist rest** and suggested basing the layer system on **old
-  cellphone keypads**, so it would feel familiar.
-- The other gave a harder message: switching layers can be **too complicated**,
-  especially for patients with cognitive decline. That warning pushed us to make layer
-  switching as easy as possible.
+A lot of the final design came out of those conversations:
 
-**How that feedback shows up in the final design:**
-
-- **Two ways to switch layers.** Users can press dedicated left and right shift keys on
-  the keyboard or use the foot pedals, so people who struggle with one method can use
-  the other. The RGB backlight makes the current layer obvious at a glance.
-- **A letter layout based on letter frequency**, arranged so most words need no more
-  than two layer shifts.
-- **A wrist rest and an angled case** to steady the hands.
-- **A trackball that stays captive.** It can't fall out when the device is bumped or
-  carried around.
-- **A tremor delay setting** that filters out accidental keypresses, plus adjustable
-  trackball speed and LED brightness, because every user's tremor is different.
-- **Printed keycap labels.** Our hand-drawn labels were messy and hard to read, so we
-  replaced them with printed sticker labels.
+- You can switch layers with the shift keys or the foot pedals, whichever is easier
+  for you, and the LEDs make the current layer easy to see.
+- The letters are arranged by how often they're used, so most words take two layer
+  shifts or fewer.
+- There's a wrist rest and the case is angled.
+- The trackball is held in so it can't fall out if the keyboard gets bumped or moved.
+- A "tremor delay" setting ignores accidental extra presses, and trackball speed and
+  LED brightness are adjustable too.
+- We replaced our hand-drawn key labels with printed stickers because the hand-drawn
+  ones were hard to read.
 
 ## Electrical design
 
-I led the PCB design for SteadKey in KiCad. Each generation fixed problems found in
-the one before.
+I led the PCB design in KiCad. Each version fixed problems from the last one.
 
-### Generation 1: proof of concept
+### Generation 1
 
-Generation 1 had a small board with a USB-C microcontroller, nine multi-letter keys,
-discrete LEDs to show the layer, and connectors for the two foot pedals. Each key used
-its own input pin, which capped the number of keys we could have.
+The first board was small: a USB-C microcontroller, nine keys with several letters each,
+a few LEDs to show the layer, and connectors for the foot pedals. Every key had its own
+input pin, which limited how many keys we could fit.
 
-### Generation 2: key matrix, RGB LEDs and the trackball
+### Generation 2
 
-To move to a full layout, I redesigned the board around a **diode key matrix**. Each
-switch sits where one row line crosses one column line, so the microcontroller can scan
-dozens of keys with a handful of pins. The diodes stop "ghost" keypresses when several
-keys are held down at once.
+To get to a full layout I switched to a key matrix with diodes. Each switch connects
+one row and one column, so the microcontroller can read a lot of keys with only a few
+pins, and the diodes stop false presses when multiple keys are held down.
 
-For layer indication I used **SK6812MINI-E addressable RGB LEDs** under the keys. They
-connect in a daisy chain, so one data pin controls all of them. Each LED has its own
-100 nF decoupling capacitor to keep the power supply stable when they switch.
+For the layer lights I used SK6812MINI-E addressable RGB LEDs. They're chained together,
+so one data pin controls all of them, and each one has a 100 nF decoupling capacitor.
 
-The trackball uses a **PMW3360 optical sensor** on a breakout board. The breakout
-connects to the main PCB through a 7-pin JST connector and sits under a 3D-printed
-mount that spins the ball on 3 mm ceramic bearings. An OLED connects over SPI.
+The trackball uses a PMW3360 optical sensor on a small breakout board that plugs into
+the main PCB with a 7-pin JST connector. The ball sits on 3 mm ceramic bearings in a
+3D-printed mount. The OLED connects over SPI.
 
-This generation taught me a hard lesson about checking footprints. I'd picked
-capacitors far too small to hand-solder, so we had to learn to reflow them onto the
-board with a hot-air gun.
+I made one big mistake on this board: I picked capacitors that were way too small to
+solder by hand. We ended up learning to reflow them with a hot-air gun.
 
 ![Generation 2 prototype](/images/projects/steadkey/gen2.jpg)
 
-### Generation 3: smaller, cleaner, professionally assembled
+### Generation 3
 
 ![Generation 3 PCB layout in KiCad](/images/projects/steadkey/gen3-pcb.jpg)
 
-For the final version I kept the Generation 2 schematic, fixed a **5 V connection** that
-had been missed, and re-laid out the board with the goal of shrinking it:
+For the final board I kept the Generation 2 schematic, fixed a 5 V connection we'd
+missed, and redid the layout to make it smaller. Moving the JST connectors for the
+trackball, OLED and pedals to the bottom of the board saved over 30 mm. Tightening the
+spacing between key groups saved about 30 mm more, and moving the microcontroller (an
+Arduino Nano ESP32) saved another 30 mm or so. I also moved the trackball sensor to the
+underside of the board so the ball could sit lower.
 
-- I moved the JST connectors for the trackball, OLED and foot pedals to the **bottom
-  layer**, which saved more than 30 mm.
-- Tighter spacing between key groups saved about another 30 mm. The keys were still
-  large enough to stay accessible.
-- Moving the microcontroller, an **Arduino Nano ESP32**, saved about 30 mm more.
-- I mounted the optical sensor **under** the PCB, so the trackball sits lower and is
-  more comfortable to use.
-
-To avoid weeks of hand-soldering tiny parts, I sent the board to JLCPCB with a
-pick-and-place position file, so their machines soldered the surface-mount capacitors
-and diodes. We then added hot-swap switch sockets and the LEDs by hand.
+This time I had JLCPCB solder the tiny capacitors and diodes for us, which saved a lot
+of time. We soldered the hot-swap sockets and LEDs ourselves.
 
 ![Generation 3 PCB, assembled](/images/projects/steadkey/gen3-board.jpg)
 
 ### Firmware
 
-I wrote the firmware for the Arduino Nano ESP32 in C++. It uses both of the ESP32's processor
-cores: one scans the key matrix and reads the trackball, and the other runs
-autocomplete. That way word prediction never makes typing feel laggy. Autocomplete
-draws on a word-frequency dictionary stored in the ESP32's flash memory and learns the
-user's most-typed words over time. A settings menu on the OLED lets users adjust LED
-brightness, tremor delay, trackball speed and auto-capitalization.
+I wrote the firmware in C++ for the Arduino Nano ESP32. The ESP32 has two cores, so one
+handles the keys and trackball and the other runs autocomplete, which keeps typing from
+lagging. Autocomplete uses a word-frequency list stored in flash and picks up the words
+you type most. There's also a settings menu on the OLED for LED brightness, tremor
+delay, trackball speed and auto-capitalization.
 
 ## What I learned
 
-The biggest lesson was that the people we built for were better designers than we
-were. Features we were excited about, like more layers, turned out to be confusing.
-Small details, like a pedal you can rest your foot on or a delay that ignores a shaky
-double press, made the biggest difference. On the electrical side, Generation 3 taught
-me to design for manufacturing from the start: pick parts that can be assembled, check
-every footprint, and use both sides of the board.
+Talking to actual users changed the project more than anything else. Some features we
+were excited about, like adding more layers, would have just made it confusing, and
+small things like a pedal you can rest your foot on mattered a lot more than we
+expected. On the hardware side, I learned to think about how a board will actually get
+built: check every footprint, pick parts you can really solder, and use both sides of
+the board.

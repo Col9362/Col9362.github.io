@@ -2,4 +2,4 @@
 title: "Projects"
 ---
 
-Hardware projects I've designed and built, from PCB to case to firmware.
+Some of the hardware I've designed and built.
