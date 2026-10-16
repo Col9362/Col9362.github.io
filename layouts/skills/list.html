@@ -23,14 +23,6 @@
             </div>
             <div class="skill-text">
               <span class="skill-name">{{ .name }}</span>
-              {{ with .note }}<span class="skill-note">{{ . }}</span>{{ end }}
-              {{ with .projects }}
-                <span class="skill-projects">
-                  {{ range $i, $slug := . }}
-                    {{ with site.GetPage (printf "/projects/%s" $slug) }}{{ if $i }} · {{ end }}<a href="{{ .RelPermalink }}">{{ .LinkTitle | replaceRE ":.*$" "" }}</a>{{ end }}
-                  {{ end }}
-                </span>
-              {{ end }}
             </div>
           </div>
         {{ end }}
