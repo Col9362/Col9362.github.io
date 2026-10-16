@@ -2,8 +2,8 @@
 title: "About"
 ---
 
-I'm **Cole Zuckerman**, a first-year engineering student in the John Martinson Honors
-College at **Purdue University**, planning to major in **Electrical Engineering**.
+I'm Cole Zuckerman, a first-year engineering student in the John Martinson Honors
+College at Purdue University, planning to major in Electrical Engineering.
 I like building hardware end to end: designing the circuit and PCB, modeling and
 printing the case, and writing the firmware that ties it together.
 
@@ -32,13 +32,9 @@ documentation on its build and test process.
 ### Robotics Summer Camp Counselor · American Heritage
 *Delray Beach, FL · June 2023 – Aug. 2024*
 
-Supervised 20 middle schoolers per session and led FTC robot builds, programming,
+Supervised ~20 middle schoolers per session and led FTC robot builds, programming,
 and manufacturing with a CNC mill, drill press and 3D printers.
 
 ## Skills
 
-
-- **Languages:** Python, MicroPython, Java
-- **Software:** KiCad, Onshape, VS Code, Arduino IDE, Thonny, Excel, Google Sheets
-- **Hardware:** Soldering, circuit design, logic design, circuit analysis
-- **Machining:** Lathe, CNC mill, bandsaw, drill press, hand tools
+See my [Skills](/skills/) page for the languages, tools and fabrication methods I use.

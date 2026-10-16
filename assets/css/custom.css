@@ -37,3 +37,50 @@
 /* About page: tighter subheadings and muted date lines */
 .post-content h3 { margin-bottom: 0.3rem; }
 .post-content h3 + p em { opacity: 0.75; }
+
+/* Skills page */
+.skills .skill-group { font-size: 2.2rem; margin: 3.2rem 0 1.2rem; }
+.skill-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(240px, 1fr));
+  gap: 1.2rem;
+}
+.skill-card {
+  --brand: currentColor;
+  display: flex;
+  align-items: center;
+  gap: 1.2rem;
+  padding: 1.2rem 1.4rem;
+  border: 1px solid rgba(127, 127, 127, 0.3);
+  border-radius: 10px;
+  transition: border-color 0.15s, transform 0.15s;
+}
+.skill-card:hover { border-color: var(--brand); transform: translateY(-2px); }
+.skill-icon {
+  flex: 0 0 4.4rem;
+  height: 4.4rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 10px;
+  background: rgba(127, 127, 127, 0.1);
+  color: var(--brand);
+}
+.skill-icon svg { width: 2.6rem; height: 2.6rem; fill: currentColor; }
+.skill-icon svg title { display: none; }
+.skill-icon i { font-size: 2.3rem; }
+.skill-text { display: flex; flex-direction: column; line-height: 1.35; min-width: 0; }
+.skill-name { font-weight: 700; font-size: 1.55rem; }
+.skill-note { font-size: 1.3rem; opacity: 0.7; }
+.skill-projects { font-size: 1.3rem; }
+
+/* Home page: featured projects under the social icons */
+.home-featured { margin-top: 3.2rem; width: 100%; max-width: 72rem; }
+.home-featured h2 { font-size: 1.4rem; letter-spacing: 0.12em; text-transform: uppercase; opacity: 0.7; margin-bottom: 1.2rem; }
+.home-featured .project-grid { margin-top: 0; text-align: left; }
+.home-featured .project-card h3 { font-size: 1.7rem; margin: 0 0 0.4rem; }
+.home-featured .project-card p { font-size: 1.35rem; margin: 0; }
+.home-links { margin-top: 1.6rem; font-size: 1.5rem; }
+.container.centered { flex-direction: column; }
+.container.centered .about { margin-top: 4rem; }
+.home-featured { margin-bottom: 4rem; }

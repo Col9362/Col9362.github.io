@@ -54,8 +54,13 @@ weight = 2
 url = "projects/"
 
 [[menu.main]]
-name = "Contact"
+name = "Skills"
 weight = 3
+url = "skills/"
+
+[[menu.main]]
+name = "Contact"
+weight = 4
 url = "contact/"
 
 [markup.goldmark.renderer]

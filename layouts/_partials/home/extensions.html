@@ -1,0 +1,15 @@
+<div class="home-featured">
+  <h2>Featured projects</h2>
+  <div class="project-grid">
+    {{ range (where site.RegularPages "Section" "projects").ByWeight }}
+      <a class="project-card" href="{{ .RelPermalink }}">
+        {{ with .Params.thumbnail | default .Params.image }}<img src="{{ . | relURL }}" alt="">{{ end }}
+        <div class="project-card-body">
+          <h3>{{ .Title }}</h3>
+          <p>{{ .Summary | plainify }}</p>
+        </div>
+      </a>
+    {{ end }}
+  </div>
+  <p class="home-links"><a href="{{ "projects/" | relURL }}">All projects</a> · <a href="{{ "skills/" | relURL }}">Skills</a> · <a href="{{ "about/" | relURL }}">About me</a></p>
+</div>
