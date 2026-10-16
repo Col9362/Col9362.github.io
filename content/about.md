@@ -18,8 +18,10 @@ printing the case, and writing the firmware that ties it together.
 ### Committee Member · Purdue IEEE SMC, EEG Build Team
 *West Lafayette, IN · Sept. 2026 – present*
 
-Designing PCBs in KiCad for an EEG (brain-signal) acquisition system with the
-IEEE Systems, Man, and Cybernetics (SMC) committee. Project page coming once the boards are further along.
+Part of the IEEE Systems, Man, and Cybernetics (SMC) committee building an EEG
+(brain-signal) acquisition system. I'm working on a custom ESP32-P4 microcontroller
+board in KiCad that interfaces with the team's ADS1299 analog front-end board.
+Project page coming once the board is further along.
 
 ### Data Analyst / IT Support · Coastal Weight Loss Secret
 *Delray Beach, FL · Sept. 2022 – present*
