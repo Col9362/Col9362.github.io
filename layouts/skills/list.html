@@ -1,0 +1,38 @@
+{{ define "title" }}{{ .Title }} · {{ .Site.Title }}{{ end }}
+{{ define "content" }}
+  <section class="container list skills">
+    <header>
+      <h1 class="title">
+        <a class="title-link" href="{{ .Permalink | safeURL }}">{{ .Title }}</a>
+      </h1>
+    </header>
+    {{ .Content }}
+    {{ range site.Data.skills.groups }}
+      <h2 class="skill-group">{{ .name }}</h2>
+      <div class="skill-grid">
+        {{ range .items }}
+          <div class="skill-card" {{ with .color }}style="--brand: {{ . | safeCSS }}"{{ end }}>
+            <div class="skill-icon">
+              {{ with .icon }}
+                {{ with resources.Get (printf "icons/%s.svg" .) }}{{ .Content | safeHTML }}{{ end }}
+              {{ else }}
+                <i class="{{ .fa }}" aria-hidden="true"></i>
+              {{ end }}
+            </div>
+            <div class="skill-text">
+              <span class="skill-name">{{ .name }}</span>
+              {{ with .note }}<span class="skill-note">{{ . }}</span>{{ end }}
+              {{ with .projects }}
+                <span class="skill-projects">
+                  {{ range $i, $slug := . }}
+                    {{ with site.GetPage (printf "/projects/%s" $slug) }}{{ if $i }} · {{ end }}<a href="{{ .RelPermalink }}">{{ .LinkTitle | replaceRE ":.*$" "" }}</a>{{ end }}
+                  {{ end }}
+                </span>
+              {{ end }}
+            </div>
+          </div>
+        {{ end }}
+      </div>
+    {{ end }}
+  </section>
+{{ end }}
