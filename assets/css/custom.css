@@ -62,13 +62,12 @@
   display: flex;
   align-items: center;
   justify-content: center;
-  border-radius: 10px;
-  background: rgba(127, 127, 127, 0.1);
   color: var(--brand);
 }
-.skill-icon svg { width: 2.6rem; height: 2.6rem; fill: currentColor; }
+.skill-icon svg { width: 3rem; height: 3rem; fill: currentColor; }
 .skill-icon svg title { display: none; }
-.skill-icon i { font-size: 2.3rem; }
+.skill-icon i { font-size: 2.6rem; }
+.skill-icon img { width: 3rem; height: 3rem; object-fit: contain; }
 .skill-text { display: flex; flex-direction: column; line-height: 1.35; min-width: 0; }
 .skill-name { font-weight: 700; font-size: 1.55rem; }
 .skill-note { font-size: 1.3rem; opacity: 0.7; }
