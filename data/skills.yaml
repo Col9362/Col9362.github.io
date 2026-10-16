@@ -1,5 +1,5 @@
-# Skills page data. Each item uses either `icon` (a file in assets/icons/, from
-# simpleicons.org) or `fa` (a Font Awesome class). `color` tints the logo;
+# Skills page data. Each item uses `icon` (an SVG in assets/icons/, from simpleicons.org),
+# `img` (a logo file in static/images/skills/) or `fa` (a Font Awesome class). `color` tints the logo;
 # leave it out to use the text color. `projects` link to project pages by slug.
 groups:
   - name: Programming
@@ -25,7 +25,7 @@ groups:
 
   - name: CAD & Fabrication
     items:
-      - { name: Onshape, fa: "fa-solid fa-cube", color: "#1A9CD8", note: "Enclosures and mechanisms", projects: [modular-handheld, steadkey] }
+      - { name: Onshape, img: onshape.png, note: "Enclosures and mechanisms", projects: [modular-handheld, steadkey] }
       - { name: 3D Printing, fa: "fa-solid fa-print", color: "#F97316" }
       - { name: CNC Mill & Lathe, fa: "fa-solid fa-gears", color: "#64748B" }
       - { name: "Bandsaw, Drill Press & Hand Tools", fa: "fa-solid fa-screwdriver-wrench", color: "#94A3B8" }
@@ -35,8 +35,8 @@ groups:
       - { name: Git, icon: git, color: "#F05032" }
       - { name: GitHub, icon: github }
       - { name: GitHub Actions, icon: githubactions, color: "#2088FF", note: "HPCC Platform workflow docs" }
-      - { name: VS Code, fa: "fa-solid fa-code", color: "#22A6F2" }
-      - { name: Thonny, fa: "fa-solid fa-terminal", color: "#4C8BF5" }
+      - { name: VS Code, img: vscode.svg }
+      - { name: Thonny, img: thonny.png }
       - { name: Google Sheets, icon: googlesheets, color: "#34A853" }
-      - { name: Excel, fa: "fa-solid fa-table", color: "#21A366" }
+      - { name: Excel, img: excel.svg }
       - { name: Shopify, icon: shopify, color: "#7AB55C" }
