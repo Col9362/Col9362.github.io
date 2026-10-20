@@ -5,7 +5,7 @@ title: "About"
 I'm Cole Zuckerman, a first-year engineering student at Purdue in the John Martinson
 Honors College, and I'm planning to major in Electrical Engineering. Most of my
 projects are hardware I build from start to finish. I design the circuit and PCB,
-model and 3D print the case, and write the code that runs on it.
+model and 3D print the case, write the code, and test everything. 
 
 ## Education
 
@@ -18,8 +18,7 @@ model and 3D print the case, and write the code that runs on it.
 ### Committee Member · Purdue IEEE SMC, EEG Build Team
 *West Lafayette, IN · Sept. 2026 – present*
 
-I'm a member of the electrical team in the IEEE Systems, Man, and Cybernetics (SMC) committee, which is building an EEG
-system to record brain signals. Right now I'm working on a custom ESP32-P4
+I'm a member of the electrical team in the IEEE Systems, Man, and Cybernetics (SMC) committee, which is building an EEG system to record brain signals. Right now I'm working on a custom ESP32-P4
 microcontroller board in KiCad that connects to the team's ADS1299 board.
 
 ### Data Analyst / IT Support · Coastal Weight Loss Secret
