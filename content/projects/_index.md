@@ -2,4 +2,4 @@
 title: "Projects"
 ---
 
-Some of the hardware I've designed and built.
+Some of the projects that I have worked on.

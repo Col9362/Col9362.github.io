@@ -3,9 +3,7 @@ title: "About"
 ---
 
 I'm Cole Zuckerman, a first-year engineering student at Purdue in the John Martinson
-Honors College, and I'm planning to major in Electrical Engineering. Most of my
-projects are hardware I build from start to finish. I design the circuit and PCB,
-model and 3D print the case, write the code, and test everything. 
+Honors College, and I'm planning to major in Electrical Engineering. I love to make things, and have worked on projects in a variety of fields. Most of what I build is hardware, and I do everything: I design the circuit and PCB, model and 3D print the case, write the code, and test it. 
 
 ## Education
 
@@ -18,14 +16,14 @@ model and 3D print the case, write the code, and test everything.
 ### Committee Member · Purdue IEEE SMC, EEG Build Team
 *West Lafayette, IN · Sept. 2026 – present*
 
-I'm a member of the electrical team in the IEEE Systems, Man, and Cybernetics (SMC) committee, which is building an EEG system to record brain signals. Right now I'm working on a custom ESP32-P4
-microcontroller board in KiCad that connects to the team's ADS1299 board.
+I'm a member of the electrical team in the IEEE Systems, Man, and Cybernetics (SMC) committee, which is building a 128-channel EEG system to record brain signals. Right now I'm a part of the team working on a custom ESP32-P4
+microcontroller board in KiCad that connects to the team's ADS1299 board with the goal of making the microcontroller as small as possible.
 
 ### Data Analyst / IT Support · Coastal Weight Loss Secret
 *Delray Beach, FL · Sept. 2022 – present*
 
-I built a management sheet in Google Sheets that tracks advertising ROI across 8 radio
-stations and how many customers convert. I also run the company's Shopify site and edit
+I built a management sheet in Google Sheets that tracks advertising ROI across multiple radio
+stations and how many customers convert. I also run the company's Shopify site and help edit
 videos for social media.
 
 ### Computer Science Workflow Intern · CodeDay Labs + LexisNexis
