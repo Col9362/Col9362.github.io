@@ -1,0 +1,6 @@
+{{- /* Renders every Markdown image as a figure, using its alt text as the caption. */ -}}
+<figure class="content-figure">
+  <img src="{{ .Destination | safeURL }}" alt="{{ .PlainText }}" loading="lazy">
+  {{- with .PlainText }}<figcaption>{{ . }}</figcaption>{{ end }}
+</figure>
+{{- /* */ -}}

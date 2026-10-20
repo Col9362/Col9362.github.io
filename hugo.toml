@@ -65,3 +65,7 @@ url = "contact/"
 
 [markup.goldmark.renderer]
 unsafe = true
+
+# Keep standalone images out of <p> tags so they can render as <figure>s with captions
+[markup.goldmark.parser]
+wrapStandAloneImageWithinParagraph = false

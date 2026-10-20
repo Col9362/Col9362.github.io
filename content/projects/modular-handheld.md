@@ -13,7 +13,7 @@ weight: 1
 
 The goal of this project was to learn how to design and implement a modular system that a user could easily interact with. The base unit contains the Pimoroni Pico LiPo (Raspberry Pi Pico variant with battery charging) as well as the display, and different control modules twist lock onto the bottom, with a magnetic pogo pin connector providing the electrical connection. The first module I built is a retro gaming controller, with future plans for more modules.
 
-![The base unit and gaming module, separated](/images/projects/handheld/modules.jpg)
+![The base unit (left) and the gaming module (right), separated](/images/projects/handheld/modules.jpg)
 
 ## How it works
 
@@ -32,38 +32,38 @@ The gaming module has an MCP23017 I/O expander for the seven buttons and the joy
 click, an ADS1115 ADC for the analog joystick, and a DRV2605 haptic driver. All three
 talk to the base over the same I2C bus.
 
-![3D render of the base unit PCB](/images/projects/handheld/base-3d.png)
+## Hardware
 
-![The magnetic pogo connector on the board edge and the display ribbon cable](/images/projects/handheld/base-connectors-3d.png)
-
-## Software
-
-I wrote the software in MicroPython using the Thonny IDE. It has a home screen and game menu you
-control with the joystick and buttons and a settings menu for brightness, volume, and other miscellaneous features. There is also a battery indicator for percentage and charging status. Currently the only game is Tetris (with music and saved high scores), with plans for future 8-bit games such as brick breaker and space invaders.
-
-## PCB design
+### Base unit
 
 The base unit is a two-layer board I designed in KiCad. The Pico LiPo is in the middle, the
 display connector is on the left, and the pogo connector runs along the bottom edge
 where the modules attach.
 
-The gaming module is also a two-layer board designed in KiCad. The pogo connector runs along the top edge, the joystick is in the left middle, and the buttons fill the space left over. The MCP23017 and the ADS1115 are located on the back layer.
+![3D render of the base unit PCB with the Pico LiPo, display connector and pogo connector](/images/projects/handheld/base-3d.png)
 
-### Base unit
+![The magnetic pogo connector on the bottom edge, with the display ribbon cable behind it](/images/projects/handheld/base-connectors-3d.png)
 
-![Base unit PCB layout: front copper in red, back copper in blue](/images/projects/handheld/pcb-layout.svg)
+![Base unit PCB layout in KiCad (front copper in red, back copper in blue)](/images/projects/handheld/pcb-layout.svg)
 
 ![Base unit schematic](/images/projects/handheld/schematic-base.svg)
 
 ### Gaming module
 
-![3D render of the gaming module PCB](/images/projects/handheld/gaming-3d.png)
+The gaming module is also a two-layer board designed in KiCad. The pogo connector runs along the top edge, the joystick is in the left middle, and the buttons fill the space left over. The MCP23017 and the ADS1115 are located on the back layer.
+
+![3D render of the gaming module with the joystick and seven buttons](/images/projects/handheld/gaming-3d.png)
 
 ![The gaming module's half of the magnetic pogo connector](/images/projects/handheld/gaming-connector-3d.png)
 
-![Back of the gaming module PCB](/images/projects/handheld/gaming-back-3d.png)
+![Back of the gaming module: MCP23017, ADS1115 board, haptic driver board and ID resistor](/images/projects/handheld/gaming-back-3d.png)
 
 ![Gaming module schematic](/images/projects/handheld/schematic-gaming.jpg)
+
+## Software
+
+I wrote the software in MicroPython using the Thonny IDE. It has a home screen and game menu you
+control with the joystick and buttons and a settings menu for brightness, volume, and other miscellaneous features. There is also a battery indicator for percentage and charging status. Currently the only game is Tetris (with music and saved high scores), with plans for future 8-bit games such as brick breaker and space invaders.
 
 ## What went wrong
 
