@@ -104,7 +104,7 @@ delay, trackball speed and auto-capitalization.
 
 ## What I learned
 
-Talking to actual users changed the project more than anything else. Some features we
+Talking to actual users changed the project more than anything else. Ultimately, you have to design for the user, not for what you think is cool. Some features we
 were excited about, like adding more layers, would have just made it confusing, and
 small things like a pedal you can rest your foot on mattered a lot more than we
 expected. On the hardware side, I learned to think about how a board will actually get
