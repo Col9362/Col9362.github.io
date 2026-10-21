@@ -27,7 +27,7 @@ talked to said they avoid keyboards and have other people type for them, and tha
 bigger keys would help with all the keys they miss.
 
 The neurologist also added a lot. He explained that Parkinson's tremors are usually worst
-when the hand is resting and that essential tremor's effects are worse when the hands are moving, so the keyboard
+when the hand is resting, while essential tremor is worse when the hands are in use, so the keyboard
 should work for both. He liked the trackball idea since a mouse is hard to control with
 a tremor. He also suggested a wrist rest, and basing the layers on old cellphone keypads
 so they'd feel familiar. However, he did warn us that switching layers could be too confusing for patients with some cognitive decline.
