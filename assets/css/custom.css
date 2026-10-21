@@ -91,3 +91,5 @@
 
 /* The theme justifies paragraphs, which leaves big gaps between words. Use normal left alignment. */
 .content article p, .content p { text-align: left; -webkit-hyphens: manual; hyphens: manual; }
+/* Never let a single image take up more than most of the screen */
+.content-figure img { max-height: 70vh; width: auto; }

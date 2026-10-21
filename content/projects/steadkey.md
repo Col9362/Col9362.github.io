@@ -92,7 +92,7 @@ underside of the board so the ball could sit lower.
 This time I had JLCPCB solder the tiny capacitors and diodes for us, which saved a lot
 of time. We soldered the hot-swap sockets and LEDs ourselves.
 
-![Generation 3 PCB, assembled](/images/projects/steadkey/gen3-board-pcb.jpg)
+![Generation 3 PCB, assembled](/images/projects/steadkey/gen3-board-landscape.jpg)
 
 ## Firmware
 
